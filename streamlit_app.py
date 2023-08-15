@@ -1,3 +1,2 @@
-pip install streamlit;
-streamlit config show;
+!pip install streamlit;
 streamlit hello;
