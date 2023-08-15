@@ -13,6 +13,7 @@ streamlit.dataframe(my_fruit_list)
 fruits_selected=streamlit.multiselect("Pick some fruits:", my_fruit_list , ['Apple','Banana'] )
 
 
-fruits_to_show = my_fruit_list.loc[fruits_selected]
+# Filter the DataFrame based on selected fruits
+fruits_to_show = my_fruit_list[my_fruit_list['Fruit'].isin(fruits_selected)]
 streamlit.dataframe(fruits_to_show)
 
